@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 
 using namespace std; 
@@ -8,11 +16,11 @@ struct node {
 };
 
 
-void insert(node** root, int item)
+void insert(node** root, int data)
 {
     node *ptr, *temp;
     temp = new node;
-    temp->data = item;
+    temp->data = data;
     temp->next = NULL;
  
     if (*root == NULL)
@@ -76,7 +84,9 @@ int main()
     insert(&root2, 7);
     insert(&root2, 4);
     insert(&root2, 5);
+    display(root1);
 
-
+    answer(&root1,&root2);
         return 0;
 }
+
